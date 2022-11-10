@@ -44,3 +44,7 @@ Constraints for text questions are usually reserved for cases when the question 
 ## audits
 
 Set parameter track-changes in order to track changes!
+
+## Logbook
+
+Please keep track of all changes done in the tool during data collection (If really a change is necessary to be done)
