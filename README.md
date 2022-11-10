@@ -18,15 +18,30 @@ Pertains to the column `name` in _'survey'_ and _'choices'_ tabs
 
     e.g. ` "kraj_kosice" `, not: `"Košický kraj"`
 
-### 'others'
+- consistent naming of similar choices in different questions:
+
+    e.g. `dnk`, `pns` or `dont_know`, `prefer_not_to_say` and not mixing them.
+   
+## Others
 
 This section is by far the most important with regards to compatibility with our cleaning procedures!
 
-- needs to be added still
+### Survey Tab
+
+- For all other (text) questions 'name' should end with `_other`. 
+
+    e.g. If you want to add a text question for a select_one: humanitarian_assisance, than the other variable should be: humanitarian_assistance_other. 
+
+### Choices Tab
+
+- For all other choices should be only `other` and nothing else. 
+ 
+    e.g. `Other`, `Other_please_specify`, `info_other`, `other_info` will not be accepted
 
 ## constraints
 
 ### select_one
+
 
 
 ### select_multiple
@@ -43,7 +58,9 @@ Constraints for text questions are usually reserved for cases when the question 
 
 ## audits
 
-Set parameter track-changes in order to track changes!
+Set parameter track-changes in order to track changes.
+
+    e.g. Add track-changes=TRUE to the audit row in a field called parameter
 
 ## Logbook
 
