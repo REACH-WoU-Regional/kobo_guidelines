@@ -49,14 +49,19 @@ In most cases, there is no constraints usually needed for a select_one as most o
 ### select_multiple
 
 - setting a maximum number of choices that can be selected for this question:
-
-- more guidelines to be added
+    e.g. Top 5: if(selected(. , 'idnk') or selected(. ,'none') or selected(. , 'prefer_not_to_answer'), count-selected(.)=1, count-selected(.)<=5)
+    
+- setting a constraint to not select a choice with other choices:
+    e.g. if(selected(. , 'idnk') or selected(. , 'nowhere'), count-selected(.)=1, 1)
 
 ### text
 
 Constraints for text questions are usually reserved for cases when the question asks for the respondent's phone number or e-mail address.
 
 ### integer
+
+Constraints for integer are usually used to set limits and thresholds on depending on another variable or an integer:
+    e.g. . >= 0 or .<= ${hh_family_size}
 
 ## audits
 
