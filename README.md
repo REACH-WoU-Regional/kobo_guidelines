@@ -42,7 +42,9 @@ This section is by far the most important with regards to compatibility with our
 
 ### select_one
 
+In most cases, there is no constraints usually needed for a select_one as most of the cases is solved in choice_filter. However, if you are trying to set a select_one in a loop with a constraint related to main :
 
+    e.g. if(${ind_pos} = 1,  selected(. , 'respondent'),  not(selected(. , 'respondent') ))
 
 ### select_multiple
 
