@@ -30,7 +30,7 @@ This section is by far the most important with regards to compatibility with our
 
 - For all other (text) questions 'name' should end with `_other`. 
 
-    e.g. If you want to add a text question for a select_one: humanitarian_assisance, than the other variable should be: humanitarian_assistance_other. 
+    e.g. If you want to add a text question for a select_one: __humanitarian_assisance__, than the other variable should be: __humanitarian_assistance_other__. 
 
 ### Choices Tab
 
@@ -44,17 +44,17 @@ This section is by far the most important with regards to compatibility with our
 
 In most cases, there is no constraints usually needed for a select_one as most of the cases is solved in choice_filter. However, if you are trying to set a select_one in a loop with a constraint related to main :
 
-    e.g. if(${ind_pos} = 1,  selected(. , 'respondent'),  not(selected(. , 'respondent') ))
+e.g. ` if(${ind_pos} = 1,  selected(. , 'respondent'),  not(selected(. , 'respondent') )) `
 
 ### select_multiple
 
 - setting a maximum number of choices that can be selected for this question:
 
-    e.g. Top 5: if(selected(. , 'idnk') or selected(. ,'none') or selected(. , 'prefer_not_to_answer'), count-selected(.)=1, count-selected(.)<=5)
+e.g. Top 5: ` if(selected(. , 'idnk') or selected(. ,'none') or selected(. , 'prefer_not_to_answer'), count-selected(.)=1, count-selected(.)<=5) `
     
 - setting a constraint to not select a choice with other choices:
 
-    e.g. if(selected(. , 'idnk') or selected(. , 'nowhere'), count-selected(.)=1, 1)
+e.g. ` if(selected(. , 'idnk') or selected(. , 'nowhere'), count-selected(.)=1, 1) `
 
 ### text
 
@@ -64,13 +64,13 @@ Constraints for text questions are usually reserved for cases when the question 
 
 Constraints for integer are usually used to set limits and thresholds on depending on another variable or an integer:
 
-    e.g. . >= 0 or .<= ${hh_family_size}
+e.g. ` . >= 0 or . <= ${hh_family_size} `
 
 ## audits
 
 Set parameter track-changes in order to track changes.
 
-    e.g. Add track-changes=TRUE to the audit row in a field called parameter
+i.e. Add `track-changes=TRUE` to the audit row in a column called _parameter_
 
 ## Logbook
 
