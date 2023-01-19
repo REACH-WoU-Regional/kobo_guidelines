@@ -30,7 +30,7 @@ This section is by far the most important with regards to compatibility with our
 
 - For all other (text) questions 'name' should end with `_other`. 
 
-    e.g. If you want to add a text question for a select_one: __humanitarian_assisance__, than the other variable should be: __humanitarian_assistance_other__. 
+    e.g. If you want to add a text question for a select_one: __humanitarian_assistance__, than the other variable should be: __humanitarian_assistance_other__. 
 
 ### Choices Tab
 
