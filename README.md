@@ -66,6 +66,16 @@ Constraints for integer are usually used to set limits and thresholds on dependi
 
 e.g. ` . >= 0 or . <= ${hh_family_size} `
 
+## loops
+
+When it comes to including loops in your kobo tool, always make sure to take care of the following points:
+
+- Try as much as possible to reduce the amount of loops in your tool if they are following the same number of iteration.
+
+e.g. if you have two loops that are using the same variable, try to combine them in one. 
+
+- Make sure to take care of the 0 bug issue. For some reason,  if you set up a loop on a calculation that by default open on a relevancy and the calculation by default is equal to 0, the loop will always open because Kobo consider 0 as 1. To fix it, always make sure to add a position calculate in your beginning of your loop. 
+
 ## audits
 
 Set parameter track-changes in order to track changes.
