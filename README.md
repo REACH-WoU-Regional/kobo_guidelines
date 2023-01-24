@@ -76,6 +76,8 @@ e.g. if you have two loops that are using the same variable, try to combine them
 
 - Make sure to take care of the 0 bug issue. For some reason,  if you set up a loop on a calculation that by default open on a relevancy and the calculation by default is equal to 0, the loop will always open because Kobo consider 0 as 1. To fix it, always make sure to add a position calculate in your beginning of your loop. 
 
+e.g. Add a calculate row with `indexed-repeat(${A_6_hohh_y_n}, ${hh_members}, position(..)) ` 
+
 ## audits
 
 Set parameter track-changes in order to track changes.
